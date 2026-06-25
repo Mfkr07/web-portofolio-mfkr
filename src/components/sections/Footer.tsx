@@ -11,7 +11,6 @@ export const Footer = () => {
         {/* Column 1: Identity Card (5 cols) */}
         <div className="md:col-span-5 flex flex-col space-y-4">
           <div className="flex items-center space-x-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-old-gold animate-pulse" />
             <h3 className="font-display text-lg md:text-xl text-old-gold font-bold tracking-[2px] uppercase">
               M. FAKHRI ASSHOFI
             </h3>

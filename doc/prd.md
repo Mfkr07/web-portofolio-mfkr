@@ -71,10 +71,14 @@ A premium, highly interactive single-page portfolio website for **M. Fakhri Assh
 ### 3.5 Section 4: Projects
 - **Visuals**: 2-column responsive card grid.
 - **Content**:
-  - **E-COMMERCE PLATFORM** (Next.js, Laravel, React, MySQL): Real-time inventory sync & Stripe payments.
-  - **REAL-TIME DASHBOARD** (React, Supabase, Next.js): Interactive server analytics and logs.
-  - **SECURE DATA VAULT** (TypeScript, React, SQLite): Encrypted cloud credential manager.
-  - **AUTOMATED TESTING RUNNER** (Python, C++, Vercel): API load runner and CI checks.
+  - **AL-AZZHAR KINDERGARTEN & PLAYGROUP LANDING PAGE** (Next.js 15, React 19, TypeScript): Branding and educational portal for Al-Azzhar in Muaraenim.
+  - **COOPERATIVE MANAGEMENT SYSTEM (TPK KOPERASI)** (Flutter, Dart): Mobile app for member logs, simpan-pinjam management, and financial accounting.
+  - **PALM HARVEST MOBILE APP** (Flutter, Supabase, Dart): Enterprise crop harvest tracking with offline caching and Riverpod state management.
+  - **INTERNET CAFE RENTAL PLATFORM** (Laravel, PHP, MySQL): Leasing reservation, workstation checkout, catalog display, and billing invoice printing.
+  - **AUTOMATED INTERNET CAFE MANAGEMENT SUITE** (Laravel, PHP, MySQL): Advanced warned rental app with installation automation and code maps.
+  - **RURAL ASSET & INFRASTRUCTURE INVENTORY SYSTEM** (Laravel, Supabase, Vercel): Cloud-deployed village asset catalog dashboard using PostgreSQL.
+  - **SPASIKOMPUTER INTERFACE PROTOTYPE** (HTML, CSS, JS): Static web prototype for responsive catalog flows and gallery overlays.
+- **Repository Links**: Direct "View Repository" redirection link using Github icon.
 
 ### 3.6 Section 5: Contact Form
 - **Visuals**: Parchment layout with input fields bordered in gold.
