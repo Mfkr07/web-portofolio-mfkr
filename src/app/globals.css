@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom Color Palette from DESIGN.md */
+  --color-crimson-maroon: #6B1A1A;
+  --color-deep-void: #0D0D0D;
+  --color-parchment: #F0E6D0;
+  --color-old-gold: #C9A84C;
+  --color-ember-gold: #E8B84B;
+  --color-aged-cream: #F5EDD8;
+  --color-smoke-white: #E8E0D0;
+  --color-shadow-gray: #1A1A1A;
+  --color-mystic-blue: #3B7DD8;
+
+  /* Font pairings from DESIGN.md */
+  --font-display: var(--font-cinzel-decorative), serif;
+  --font-heading: var(--font-cinzel), serif;
+  --font-sans: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0D0D;
+  border-left: 1px solid rgba(201, 168, 76, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: #6B1A1A;
+  border: 2px solid #0D0D0D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E8B84B;
+}
+
+/* Base Body Styles */
+body {
+  background-color: #0D0D0D;
+  color: #E8E0D0;
+}
+
+/* Parchment Texture Style */
+.bg-parchment-texture {
+  background-color: #F0E6D0;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 80%),
+    linear-gradient(to right, rgba(160, 130, 80, 0.05) 0%, transparent 10%, transparent 90%, rgba(160, 130, 80, 0.05) 100%),
+    radial-gradient(circle at 0% 0%, rgba(139, 107, 43, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(139, 107, 43, 0.05) 0%, transparent 50%);
+  position: relative;
+}
+
+/* RPG Medieval Border Styles */
+.gilded-border {
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  outline: 1px solid rgba(201, 168, 76, 0.1);
+  outline-offset: -4px;
+  position: relative;
+}
+
+.gilded-border::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  pointer-events: none;
+}
+
+/* Gold corner dots */
+.gilded-corners::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 1px solid transparent;
+  background-image: 
+    radial-gradient(circle, #C9A84C 1.5px, transparent 1.5px),
+    radial-gradient(circle, #C9A84C 1.5px, transparent 1.5px),
+    radial-gradient(circle, #C9A84C 1.5px, transparent 1.5px),
+    radial-gradient(circle, #C9A84C 1.5px, transparent 1.5px);
+  background-position: top left, top right, bottom left, bottom right;
+  background-repeat: no-repeat;
+  background-size: 6px 6px;
+  pointer-events: none;
+}
+
+/* RPG Inventory Medallion Glows */
+.glow-gold-hover {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glow-gold-hover:hover {
+  box-shadow: 0 0 15px rgba(232, 184, 75, 0.4);
+  border-color: #E8B84B;
+  transform: scale(1.05);
+}
+
+.glow-blue-hover {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glow-blue-hover:hover {
+  box-shadow: 0 0 15px rgba(59, 125, 216, 0.5);
+  border-color: #3B7DD8;
+  transform: scale(1.05);
+}
+
+/* Smooth Scrolling Customization */
+html {
+  scroll-padding-top: 64px;
+}
+
+/* Albion Online Enchantment Dots */
+.enchantment-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px currentColor;
+}
+.enchantment-dot-green {
+  color: #3ECF8E;
+  background-color: #3ECF8E;
+}
+.enchantment-dot-blue {
+  color: #3B7DD8;
+  background-color: #3B7DD8;
+}
+.enchantment-dot-purple {
+  color: #a855f7;
+  background-color: #a855f7;
+}
+
+/* Custom Text Underlines */
+.hover-underline-gold {
+  position: relative;
+}
+.hover-underline-gold::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #C9A84C;
+  transition: width 0.2s ease-in-out;
+}
+.hover-underline-gold:hover::after {
+  width: 100%;
+}
+
+/* Continuous Left-to-Right Marquee Carousel */
+@keyframes marquee-ltr {
+  0% {
+    transform: translateX(-33.3333%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-ltr {
+  display: flex;
+  width: max-content;
+  animation: marquee-ltr 25s linear infinite;
+}
+
