@@ -6,6 +6,7 @@ import { skills } from '@/lib/skills';
 import { SkillIcon } from '../ui/SkillIcons';
 
 export const Skills = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   // Triple the skills array to ensure enough width for seamless loop
   const duplicatedSkills = [...skills, ...skills, ...skills];
 
@@ -22,7 +23,7 @@ export const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="font-display text-2xl md:text-3xl text-crimson-maroon font-bold tracking-[3px] uppercase"
+            className="font-display text-2xl md:text-3xl text-crimson-maroon tracking-[3px] uppercase font-bold"
           >
             TECHNICAL SKILLS
           </motion.h2>
@@ -31,7 +32,7 @@ export const Skills = () => {
       </div>
 
       {/* Carousel Container */}
-      <div className="relative w-full overflow-hidden py-4">
+      <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
         {/* Shadow Overlay Left & Right for Depth */}
         <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#F0E6D0] via-[#F0E6D0]/60 to-transparent z-30 pointer-events-none" />
         <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#F0E6D0] via-[#F0E6D0]/60 to-transparent z-30 pointer-events-none" />
@@ -48,7 +49,7 @@ export const Skills = () => {
                 <div className="relative w-20 h-20 md:w-24 md:h-24 flex items-center justify-center">
                   {/* T8 Masterpiece Frame Overlay */}
                   <img 
-                    src="/images/frame_T8_masterpiece-removebg-preview.png" 
+                    src={`${basePath}/images/frame_T8_masterpiece-removebg-preview.png`} 
                     alt="T8 Masterpiece Frame"
                     className="absolute inset-0 w-full h-full object-contain z-10 pointer-events-none transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(232,184,75,0.7)]"
                   />

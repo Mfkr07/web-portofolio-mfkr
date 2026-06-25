@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export const AboutMe = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <section id="about" className="relative py-20 bg-parchment-texture text-deep-void">
       {/* Subtle top shading gradient to blend out of the dark Hero section */}
@@ -21,7 +22,7 @@ export const AboutMe = () => {
           {/* Ship Featured Image */}
           <div className="relative w-full aspect-[16/9] border-b border-old-gold/20 overflow-hidden group">
             <img
-              src="/images/about-featured.jpg"
+              src={`${basePath}/images/about-featured.jpg`}
               alt="Albion Ship Journey"
               className="w-full h-full object-cover filter sepia-[0.1] contrast-[1.02]"
             />

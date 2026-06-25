@@ -36,13 +36,14 @@ const StatCounter: React.FC<CounterProps> = ({ end, suffix, duration = 1500 }) =
 };
 
 export const Hero = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <section id="hero" className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden pt-20 md:pt-24 pb-8 md:pb-12 bg-deep-void">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
-          backgroundImage: "url('/images/Hero2.jpeg')",
+          backgroundImage: `url('${basePath}/images/Hero2.jpeg')`,
         }}
       />
       {/* Dark overlay matching the design */}
@@ -61,7 +62,7 @@ export const Hero = () => {
           <div
             className="w-full h-full bg-contain bg-bottom bg-no-repeat"
             style={{
-              backgroundImage: "url('/images/profile-removebg-preview.png')",
+              backgroundImage: `url('${basePath}/images/profile-removebg-preview.png')`,
               maskImage: "linear-gradient(to top, transparent 0%, black 15%)",
               WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 15%)"
             }}
